@@ -67,8 +67,7 @@ namespace DirectoryPodcastRss
 
             Directory.CreateDirectory(workingPath);
 
-            var coverPathTmp = Path.Combine(workingPath, "cover.tmp");
-            var coverPath = Path.ChangeExtension(coverPathTmp, Path.GetExtension(imageFilePath));
+            var coverPath = Path.Combine(workingPath, $"cover{Path.GetExtension(imageFilePath)}");
 
             File.Copy(imageFilePath, coverPath);
 
@@ -78,8 +77,7 @@ namespace DirectoryPodcastRss
 
             for (var i = 0; i < srcFiles.Length; ++i)
             {
-                var mediaPathTmp = Path.Combine(workingPath, $@"file{i}.tmp");
-                var mediaPath = Path.ChangeExtension(mediaPathTmp, Path.GetExtension(srcFiles[i]));
+                var mediaPath = Path.Combine(workingPath, $@"file{i}{Path.GetExtension(srcFiles[i])}");
 
                 File.Copy(srcFiles[i], mediaPath);
             }
