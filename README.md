@@ -1,7 +1,7 @@
 # directory-podcast-rss
 Generate a podcast rss feed for the contents of a directory.
 
-Sample usage: dotnet run -d "path/to/mp3-files" -i "path/to/image" --urls "http://0.0.0.0:5000"
+Sample usage: dotnet run --urls "http://0.0.0.0:5000" -d "path/to/mp3-files" -i "path/to/image"
 
 Tested with Apple Podcasts app 2.4 and AntennaPod 1.8.1.
 
